@@ -74,7 +74,7 @@ const Navbar = ({ children }) => {
         {/* Desktop Menu */}
         <ul className="hidden md:flex justify-around gap-8 items-center text-center mx-8">
           <a href="/">Home</a>
-          {isLogin ? <a href="/challenges">Challenges</a> : <a href="/#">Challenges</a>}
+          {isLogin ? <a href="/compete">Compete</a> : <a href="/#">Compete</a>}
           {isLogin ? <a href="/scoreboard">Scoreboard</a> : <a href="/#">Scoreboard</a>}
 
           {isLogin ? (
