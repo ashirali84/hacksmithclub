@@ -118,7 +118,7 @@ const Navbar = ({ children }) => {
             <a href="/" onClick={() => setMenuOpen(false)}>Home</a>
             {isLogin ? (
               <>
-                <a href="/challenges" onClick={() => setMenuOpen(false)}>Challenges</a>
+                <a href="/compete" onClick={() => setMenuOpen(false)}>Compete</a>
                 <a href="/scoreboard" onClick={() => setMenuOpen(false)}>Scoreboard</a>
                 <button
                   className="px-4 py-2 w-full text-center bg-gray-200 text-black rounded-md"

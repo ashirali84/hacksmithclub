@@ -16,16 +16,6 @@
       "static/chunks/main-app.js",
       "static/chunks/app/compete/page.js"
     ],
-    "/challenges/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/challenges/page.js"
-    ],
-    "/login/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/login/page.js"
-    ],
     "/scoreboard/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
@@ -36,10 +26,25 @@
       "static/chunks/main-app.js",
       "static/chunks/app/api/leaderboard/route.js"
     ],
-    "/api/auth/route": [
+    "/event_registration/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/api/auth/route.js"
+      "static/chunks/app/event_registration/page.js"
+    ],
+    "/api/event_register/route": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/api/event_register/route.js"
+    ],
+    "/compete/challenges/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/compete/challenges/page.js"
+    ],
+    "/_not-found/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

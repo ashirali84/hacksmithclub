@@ -1,8 +1,8 @@
 {
-  "/api/auth/route": "app/api/auth/route.js",
-  "/page": "app/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/compete/page": "app/compete/page.js",
-  "/challenges/page": "app/challenges/page.js",
-  "/login/page": "app/login/page.js",
-  "/scoreboard/page": "app/scoreboard/page.js"
+  "/scoreboard/page": "app/scoreboard/page.js",
+  "/event_registration/page": "app/event_registration/page.js",
+  "/compete/challenges/page": "app/compete/challenges/page.js"
 }
