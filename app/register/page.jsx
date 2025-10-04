@@ -163,7 +163,7 @@ const Page = () => {
                     </a>
                   </p>
                 </form>
-                {message && <p className="my-2 text-red-400">{message}</p>}
+                {message && <p className="my-2 text-red-400">{alert(message)}</p>}
               </div>
             </div>
           </div>

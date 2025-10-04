@@ -1,8 +1,10 @@
 {
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/compete/page": "app/compete/page.js",
-  "/scoreboard/page": "app/scoreboard/page.js",
-  "/event_registration/page": "app/event_registration/page.js",
-  "/compete/challenges/page": "app/compete/challenges/page.js"
+  "/api/solved/route": "app/api/solved/route.js",
+  "/api/submit-flag/route": "app/api/submit-flag/route.js",
+  "/api/leaderboard/route": "app/api/leaderboard/route.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/compete/challenges/page": "app/compete/challenges/page.js",
+  "/scoreboard/page": "app/scoreboard/page.js"
 }

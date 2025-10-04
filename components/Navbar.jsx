@@ -15,34 +15,38 @@ const Navbar = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const checkUser = () => {
-      const storedUser = Cookies.get("user");
-      if (storedUser) {
-        try {
-          const parsedUser = JSON.parse(storedUser);
-          setIsLogin(true);
-          setUsername(parsedUser?.name || "user");
-        } catch (error) {
-          console.error("Error parsing user cookie:", error);
-        }
-      } else {
+  const checkUser = () => {
+    const storedUser = Cookies.get("user");
+
+    if (storedUser && storedUser !== "undefined") {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        setIsLogin(true);
+        setUsername(parsedUser?.name || "user");
+      } catch (error) {
+        console.error("Error parsing user cookie:", error);
         setIsLogin(false);
         setUsername("");
       }
-      setLoading(false);
-    };
+    } else {
+      setIsLogin(false);
+      setUsername("");
+    }
 
-    checkUser(); // initial check
+    setLoading(false);
+  };
 
-    // Listen for login/logout events
-    window.addEventListener("userLogin", checkUser);
-    window.addEventListener("userLogout", checkUser);
+  checkUser();
 
-    return () => {
-      window.removeEventListener("userLogin", checkUser);
-      window.removeEventListener("userLogout", checkUser);
-    };
-  }, []);
+  window.addEventListener("userLogin", checkUser);
+  window.addEventListener("userLogout", checkUser);
+
+  return () => {
+    window.removeEventListener("userLogin", checkUser);
+    window.removeEventListener("userLogout", checkUser);
+  };
+}, []);
+
 
   const handleLogout = () => {
     Cookies.remove("user");

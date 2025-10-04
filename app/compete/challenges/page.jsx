@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Cookies from "js-cookie";
 
 const challenges = [
   { id: 1, title: "Crack me", category: "Cryptography", points: 50, hintTitle: "Crack Me", hint: "RUVHQUF7SV9BTV9CQFMzNjRfM05DUllQVEkwTn0=" },
@@ -19,10 +20,19 @@ export default function Page() {
   const [totalPoints, setTotalPoints] = useState(0);
 
   useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (storedUser?.email) {
-      setUser(storedUser);
-      fetchSolvedData(storedUser.email);
+    const storedUser = Cookies.get("user");
+
+    if (storedUser && storedUser !== "undefined") {
+      try {
+        const parsedUser = JSON.parse(storedUser);
+        if (parsedUser?.email) {
+          setUser(parsedUser);
+          fetchSolvedData(parsedUser.email);
+        }
+      } catch (err) {
+        console.error("Invalid user cookie:", err);
+        Cookies.remove("user"); // galat cookie remove kar do
+      }
     }
   }, []);
 
