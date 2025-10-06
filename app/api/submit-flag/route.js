@@ -17,7 +17,7 @@ export async function POST(req) {
       2: { id: 2, flag: "EEGAA{w0w_url_3nc0ding_d3crypt}", points: 70 },
       3: { id: 3, flag: "EEGAA{_IAM_TR1CKY_you_CANT_GE7}", points: 100 },
       4: { id: 4, flag: "EEGAA{HEY_TH3_S3CRAT3_K3Y_1717} ", points: 50 },
-      5: { id: 5, flag: "EEGAA{h3r3_1s_s0m37ing_intr35ting} ", points: 100 },
+      5: { id: 5, flag: "EEGAA{h3r3_1s_s0m37ing_intr35ting}", points: 100 },
     };
 
     const challenge = challenges[challengeId];
